@@ -56,6 +56,19 @@ This was my first time importing JSON directly as a module:
   import data from "./data.json" with { type: "json" };
  ```
 
+### 2. Fixing the card background “bleeding” issue
+
+A very interesting CSS problem was that the bright card colors seemed to “bleed” through the rounded corners on a dark background.
+
+The solution was a gradient-based background that stops before the rounded corners begin:
+
+```css
+background: linear-gradient(#FF8B64, #FF8B64) no-repeat; /* orange */
+background-size: 100% calc(100% - var(--radius));
+```
+This cuts the background before the bottom border-radius area, so the overlay and the rounded corners look clean without needing extra wrappers or oversized corners.
+
+
 #### Key takeaways:
 
 - JSON imports in modern environments require the with { type: "json" } flag.
