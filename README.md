@@ -46,23 +46,23 @@ Users should be able to:
 - JSON module import  
 
 
-### What I Learned
+## What I Learned
 
 This project taught me a few important things.
-1. Importing and using JSON modules
+### 1. Importing and using JSON modules
 This was my first time importing JSON directly as a module:
 
   ```js
   import data from "./data.json" with { type: "json" };
  ```
 
-### Key takeaways:
+#### Key takeaways:
 
 - JSON imports in modern environments require the with { type: "json" } flag.
 - I learned how to structure and access the JSON data for different timeframes (daily, weekly, monthly).
 - The UI updates dynamically based on the selected period, using data from the JSON file.
 
-## 2. Safe DOM selection
+### 2. Safe DOM selection
 I used safe DOM selection to avoid errors if elements are missing:
  ```js
 const timeframeButtons = document.querySelectorAll('.timeframe-btn');
