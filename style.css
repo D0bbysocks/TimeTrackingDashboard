@@ -1,0 +1,438 @@
+/* =========================================
+   DESIGN TOKENS TEMPLATE
+   ========================================= */
+:root {
+  /* ---------- COLORS ---------- */
+  /* Basisfarben */
+  --white: #ffffff;
+  --black: #000000;
+
+  /* Primär- / Sekundärfarben */
+  --bg-body: var(--navy-950);
+  --bg-card: var(--navy-900);
+  --text-primary: var(--white);
+  --text-secondary: var(--navy-200);
+  --text-third: var(--purple-500);
+  --accent: var(--purple-600);
+
+  /* Navy */
+  --navy-950: #0E1323;
+  --navy-900: #1C204B;
+  --navy-800: #33397A;
+  --navy-200: #BBC0FF;
+
+  /* Orange */
+  --orange-300: #FF8B64;
+
+  /* Purple */
+  --purple-700: #7335D2;
+  --purple-600: #5747EA;
+  --purple-500: #7078C9;
+
+  /* Blue */
+  --blue-300: #55C2E6;
+
+  /* Pink */
+  --pink-400: #FF5E7D;
+
+  /* Green */
+  --green-400: #4BCF82;
+
+  /* Yellow */
+  --yellow-300: #F1C75B;
+
+  /* Grey */
+  --grey-200: #D8D8D8; 
+
+
+  /* ---------- TYPOGRAPHY ---------- */
+  /* Fonts */
+  --font-sans: "Rubik", system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+
+
+   /* === Text Presets === */
+
+  /* Preset 1 */
+  --fs-56: 3.5rem;   /* 56px */
+  --lh-56: 1.18;     /* 66 / 56 */
+
+  /* Preset 2 */
+  --fs-40: 2.5rem;   /* 40px */
+  --lh-40: 1.175;    /* 47 / 40 */
+
+  /* Preset 3 */
+  --fs-32: 2rem;     /* 32px */
+  --lh-32: 1.19;     /* 38 / 32 */
+
+  /* Preset 4 */
+  --fs-24: 1.5rem;   /* 24px */
+  --lh-24: 1.17;     /* 28 / 24 */
+
+  /* Preset 5 (18px) */
+  --fs-18: 1.125rem; /* 18px */
+  --lh-18: 1.17;     /* 21 / 18 */
+
+  /* Preset 6 (15px) */
+  --fs-15: 0.9375rem; /* 15px */
+  --lh-15: 1.2;       /* 18 / 15 */
+
+  /* === Spacing Scale === */
+  --spacing-0:    0px;
+  --spacing-8:  0.5rem;  /* 8px */
+  --spacing-16:  1rem;    /* 16px */
+  --spacing-24:  1.5rem;  /* 24px */
+  --spacing-32:  2rem;    /* 32px */
+  --spacing-40:  2.5rem;  /* 40px */
+
+  /* ---------- RADIUS / SHADOWS ---------- */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-card: 15px;
+
+
+  /* ---------- BREAKPOINTS ---------- */
+  --bp-sm: 600px;
+  --bp-md: 768px;
+  --bp-lg: 1024px;
+  --bp-xl: 1280px;
+
+  --content-max: 1100px;
+}
+
+/* =========================================================
+   MODERN CSS RESET
+   ========================================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  letter-spacing: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: var(--font-sans);
+  background-color: var(--bg-body);
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  font: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: var(--white);
+}
+
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* =========================================
+   FONT-FACE TEMPLATE
+   ========================================= */
+@font-face {
+  font-family: "Rubik";
+  src: url("./Fonts/Rubik-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/* Presets */
+.tp-1--light {
+  font-size: var(--fs-56);
+  line-height: var(--lh-56);
+  font-weight: 300;
+}
+.tp-2--light {
+  font-size: var(--fs-40);
+  line-height: var(--lh-40);
+  font-weight: 300;
+}
+.tp-3--light {
+  font-size: var(--fs-32);
+  line-height: var(--lh-32);
+  font-weight: 300;
+}
+.tp-4--light {
+  font-size: var(--fs-24);
+  line-height: var(--lh-24);
+  font-weight: 300;
+}
+.tp-5--medium {
+  font-size: var(--fs-18);
+  line-height: var(--lh-18);
+  font-weight: 500;
+}
+.tp-5--regular {
+  font-size: var(--fs-18);
+  line-height: var(--lh-18);
+  font-weight: 400;
+}
+.tp-6--regular {
+  font-size: var(--fs-15);
+  line-height: var(--lh-15);
+  font-weight: 400;
+}
+
+.text-secondary { color: var(--text-secondary); }
+.text-third { color: var(--text-third); } 
+
+/* Site Styles */
+main {
+  margin: 5.0625rem 0;
+  width: min(100% - 2 * var(--spacing-24), var(--content-max));
+  padding-inline: var(--spacing-24);
+  margin-inline: auto;
+}
+
+.card-wrapper {
+  display: grid;
+  gap: var(--spacing-24);
+}
+
+
+/* Main Card Styles */
+
+.main-card {
+  display: flex;
+  flex-direction: column;
+  height: 203px;
+  background-color: var(--bg-card);
+  border-radius: var(--radius-card);
+}
+
+.intro {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-24);
+  background-color: var(--accent);
+  padding: var(--spacing-32);
+  border-radius: var(--radius-card);
+}
+
+.client-img {
+  width: 4rem;
+  height: 4rem;
+  border: 3px solid var(--white);
+  border-radius: 50%;
+}
+
+.client h1 {
+  margin-top: var(--spacing-8);
+}
+
+.selection {
+  display: flex;
+  justify-content: space-around;
+  margin-top: var(--spacing-24);
+}
+
+.selection .active {
+  color: var(--white);
+}
+
+.selection button {
+  color: var(--purple-500);
+}
+
+/* Card */
+.card {
+  position: relative;
+  height: 160px;
+  width: 100%;
+  border-radius: var(--radius-card);
+  background: linear-gradient(var(--card-color), var(--card-color)) no-repeat;
+  background-size: 100% calc(100% - var(--radius-card));
+  overflow: hidden;
+
+}
+
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  height: 122px;
+  width: 100%;
+  background-color: var(--bg-card);
+  border-radius: var(--radius-card);
+  z-index: 100;
+  padding: var(--spacing-24);
+  
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+  row-gap: var(--spacing-8);
+}
+
+.card-overlay > *:nth-child(odd) {
+  justify-self: start;
+}
+
+.card-overlay > *:nth-child(even) {
+  justify-self: end;
+}
+
+.timeSpan > p{
+  color: var(--text-secondary);
+}
+
+
+/* Class Cards Color*/
+.card.work { --card-color: var(--orange-300); }
+
+.card.play { --card-color: var(--blue-300); }
+
+.card.study { --card-color: var(--pink-400); }
+
+.card.exercise { --card-color: var(--green-400); }
+
+.card.social { --card-color: var(--purple-700); }
+
+.card.selfCare { --card-color: var(--yellow-300); }
+
+.task > h3 {
+    font-weight: 400;
+  }
+
+.card > img {
+  position: absolute;
+  top: -0.6rem;
+  right: 1.09rem;
+}
+
+@media (min-width: 650px ) {
+
+  body {
+    display: flex;
+    margin-top: 0;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+    
+  .card-wrapper {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .main-card {
+    grid-column: 1 / 4;
+  }
+
+  /* Card hight for Tablets */
+  .card {
+    height: 213px;
+  }
+
+  .card-overlay {
+    height: 180px;
+  }
+
+  .card-overlay:active,
+  .card-overlay:hover {
+    background-color: var(--navy-800);
+  }
+
+  .card-overlay .timeSpan {
+    justify-self: start;
+  }
+
+  .taskHours {
+    grid-column: 1 / 3;
+    font-size: var(--fs-56);
+    line-height: var(--lh-56);
+  }
+
+  .timeSpan {
+    grid-column: 1 / 3;
+  }
+}
+
+
+@media (min-width: 1024px ) {
+
+
+  .card-wrapper {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: var(--spacing-32);
+  }
+
+  .main-card {
+    height: 100%;
+
+    grid-column: 1 / 2;
+
+    grid-row: 1 / 3;
+  }
+
+  .card {
+    height: 244px;
+  }
+
+  .card-overlay {
+    height: 199px;
+  }
+
+  .intro {
+    height: 68.1%;
+    gap: var(--spacing-40);
+  }
+
+  .selection {
+    margin: 0;
+    padding: var(--spacing-32);
+    gap: 1.3125rem;
+  }
+
+  .selection, .intro {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .client > h1 {
+    margin-top: 0;
+    font-size: var(--fs-40);
+    line-height: var(--lh-40);
+  }
+
+  .client-img {
+    width: 78px;
+    height: 78px;
+  }
+
+  .taskHours {
+    margin-top: var(--spacing-16);
+  }
+
+}
