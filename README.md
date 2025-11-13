@@ -103,12 +103,13 @@ MDN Web Docs - Static Import of JSON – Official docs on JSON module imports
 Frontend Mentor Community – Great feedback and inspiration
 
 
-Author
+### Author
 
-GitHub: @d0bbysocks
-Frontend Mentor: @d0bbysocks
+GitHub – d0bbysocks
+
+Frontend Mentor – @d0bbysocks
 
 
-Acknowledgments
+### Acknowledgments
 Special thanks to the Frontend Mentor community for the challenge and feedback.
 Also shoutout to everyone who helped debug my JSON import issues on Stack Overflow!
