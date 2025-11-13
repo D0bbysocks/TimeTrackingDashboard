@@ -46,7 +46,7 @@ Users should be able to:
 - JSON module import  
 
 
-## What I Learned
+### What I Learned
 
 This project taught me a few important things.
 1. Importing and using JSON modules
@@ -55,3 +55,47 @@ This was my first time importing JSON directly as a module:
   ```js
   import data from "./data.json" with { type: "json" };
  ```
+
+### Key takeaways:
+
+- JSON imports in modern environments require the with { type: "json" } flag.
+- I learned how to structure and access the JSON data for different timeframes (daily, weekly, monthly).
+- The UI updates dynamically based on the selected period, using data from the JSON file.
+
+## 2. Safe DOM selection
+I used safe DOM selection to avoid errors if elements are missing:
+ ```js
+const timeframeButtons = document.querySelectorAll('.timeframe-btn');
+const cards = document.querySelectorAll('.stat-card');
+
+if (!timeframeButtons.length || !cards.length) {
+  console.error('Required elements not found in DOM');
+}
+ ```
+
+
+ This prevents runtime errors during development and improves robustness.
+
+## Continued Development
+In future projects, I want to focus on:
+
+- Implementing TypeScript for better type safety with JSON data
+- Adding smooth transitions between timeframe switches
+- Exploring CSS Grid areas for more complex layouts
+
+
+## Useful Resources
+
+MDN Web Docs - Static Import of JSON – Official docs on JSON module imports
+Frontend Mentor Community – Great feedback and inspiration
+
+
+Author
+
+GitHub: @d0bbysocks
+Frontend Mentor: @d0bbysocks
+
+
+Acknowledgments
+Special thanks to the Frontend Mentor community for the challenge and feedback.
+Also shoutout to everyone who helped debug my JSON import issues on Stack Overflow!
